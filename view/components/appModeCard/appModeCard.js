@@ -41,9 +41,10 @@ export class ModeCard extends HTMLElement {
     if (href) {
       const cardDiv = this.querySelector('.mode-card');
       if (cardDiv) {
-        cardDiv.style.cursor = 'pointer'; // Deixa o ponteiro do mouse como "mãozinha"
+        cardDiv.style.cursor = 'pointer';
         cardDiv.addEventListener('click', () => {
-          window.location.href = href; // Redireciona para a página do link
+          const base = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+          window.location.href = `${base}${href}`;
         });
       }
     }

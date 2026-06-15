@@ -6,7 +6,8 @@ export function requireLogin() {
   const currentName = currentUserData?.username || null;
 
   if (!currentName) {
-    window.location.href = '/view/pages/main.html';
+    const base = window.location.pathname.split('/').slice(0, 2).join('/');
+    window.location.href = `${base}/view/pages/main.html`;
     throw new Error(""); 
   }
 }

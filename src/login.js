@@ -20,5 +20,6 @@ form.addEventListener('submit', function(event) {
 
   Storage.write('currentUser', {'username': name}, true);
 
-  window.location.href = '/view/pages/dashboard.html';
+  const base = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+  window.location.href = `${base}/view/pages/dashboard.html`;
 });

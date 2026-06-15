@@ -84,7 +84,8 @@ export class AppHeader extends HTMLElement {
 
     const homeBtn = this.querySelector('.home-btn');
     homeBtn.addEventListener('click', () => {
-      window.location.href = '/view/pages/main.html';
+      const base = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+      window.location.href = `${base}/view/pages/main.html`;
     });
   }
 }
