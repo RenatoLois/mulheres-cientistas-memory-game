@@ -107,29 +107,29 @@
   transform: scale(0.98);
 }
 
-body.dark .player-profile {
+html.dark body .player-profile {
   background-color: #1a1917;
   border-color: #fdfbf7;
 }
 
-body.dark .profile-name {
+html.dark body .profile-name {
   color: #fdfbf7;
 }
 
-body.dark .stat-item {
+html.dark body .stat-item {
   background-color: rgba(223, 221, 247, 0.08);
 }
 
-body.dark .stat-label {
+html.dark body .stat-label {
   color: #fdfbf7;
 }
 
-body.dark #change-icon-btn {
+html.dark body #change-icon-btn {
   background-color: #2933ff;
   color: #fdfbf7;
 }
 
-body.dark #change-icon-btn:hover {
+html.dark body #change-icon-btn:hover {
   background-color: #e0deda;
 }
 

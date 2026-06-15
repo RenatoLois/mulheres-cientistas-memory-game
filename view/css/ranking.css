@@ -141,44 +141,44 @@
 .podium-3 { background-color: rgba(205, 127, 50, 0.15); }
 .podium-3 .ranking-position { color: #8b4513; }
 
-body.dark .ranking-container {
+html.dark body .ranking-container {
   background-color: #1a1917;
   border-color: #fdfbf7;
 }
 
-body.dark .ranking-title,
-body.dark .ranking-name,
-body.dark .ranking-position,
-body.dark .ranking-empty,
-body.dark .ranking-tab {
+html.dark body .ranking-title,
+html.dark body .ranking-name,
+html.dark body .ranking-position,
+html.dark body .ranking-empty,
+html.dark body .ranking-tab {
   color: #fdfbf7;
 }
 
-body.dark .ranking-tabs {
+html.dark body .ranking-tabs {
   background-color: rgba(223, 221, 247, 0.05);
 }
 
-body.dark .ranking-tab.active {
+html.dark body .ranking-tab.active {
   background-color: #2933ff;
   color: #fdfbf7;
 }
 
-body.dark .ranking-item {
+html.dark body .ranking-item {
   background-color: rgba(223, 221, 247, 0.04);
 }
 
-body.dark .ranking-avatar {
+html.dark body .ranking-avatar {
   color: #fdfbf7;
 }
 
-body.dark .podium-1 { background-color: rgba(255, 215, 0, 0.1); }
-body.dark .podium-1 .ranking-position { color: #ffd700; }
+html.dark body .podium-1 { background-color: rgba(255, 215, 0, 0.1); }
+html.dark body .podium-1 .ranking-position { color: #ffd700; }
 
-body.dark .podium-2 { background-color: rgba(192, 192, 192, 0.1); }
-body.dark .podium-2 .ranking-position { color: #cccccc; }
+html.dark body .podium-2 { background-color: rgba(192, 192, 192, 0.1); }
+html.dark body .podium-2 .ranking-position { color: #cccccc; }
 
-body.dark .podium-3 { background-color: rgba(205, 127, 50, 0.1); }
-body.dark .podium-3 .ranking-position { color: #cd7f32; }
+html.dark body .podium-3 { background-color: rgba(205, 127, 50, 0.1); }
+html.dark body .podium-3 .ranking-position { color: #cd7f32; }
 
 @media (max-width: 480px) {
   .ranking-header {

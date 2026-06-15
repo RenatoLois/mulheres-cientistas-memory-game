@@ -19,7 +19,7 @@
   transition: background 0.3s, border 0.3s;
 }
 
-body.dark .start-form {
+html.dark body .start-form {
   background: rgba(30, 29, 27, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -33,7 +33,7 @@ body.dark .start-form {
   margin-top: 0;
 }
 
-body.dark .form-title {
+html.dark body .form-title {
   color: #f5efe4;
 }
 
@@ -65,7 +65,7 @@ body.dark .form-title {
   transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
 
-body.dark .input-group input {
+html.dark body .input-group input {
   background-color: #262522;
   border-color: #3a3834;
   color: #f5efe4;
@@ -79,11 +79,11 @@ body.dark .input-group input {
   color: #8b7e66;
 }
 
-body.dark .input-group input:focus {
+html.dark body .input-group input:focus {
   border-color: #d1c7bd;
 }
 
-body.dark .input-group input:focus + .input-icon {
+html.dark body .input-group input:focus + .input-icon {
   color: #d1c7bd;
 }
 
@@ -113,12 +113,12 @@ body.dark .input-group input:focus + .input-icon {
   transform: scale(0.98);
 }
 
-body.dark .btn-start {
+html.dark body .btn-start {
   background-color: #f5efe4;
   color: #121215;
 }
 
-body.dark .btn-start:hover {
+html.dark body .btn-start:hover {
   background-color: #e6ded0;
 }
 

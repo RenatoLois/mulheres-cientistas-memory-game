@@ -90,23 +90,23 @@
   box-shadow: 0px 0px 0px transparent !important;
 }
 
-body.dark .menu-container {
+html.dark body .menu-container {
   background-color: #1a1917;
   border-color: #fdfbf7;
   border-bottom-color: #2933ff;
 }
 
-body.dark .menu-container h2,
-body.dark .menu-container p {
+html.dark body .menu-container h2,
+html.dark body .menu-container p {
   color: #fdfbf7;
 }
 
-body.dark .btn-diff {
+html.dark body .btn-diff {
   border-color: #2933ff;
   box-shadow: 4px 4px 0px #fdfbf7;
 }
 
-body.dark .btn-diff:hover {
+html.dark body .btn-diff:hover {
   box-shadow: 6px 6px 0px #fdfbf7;
 }
 

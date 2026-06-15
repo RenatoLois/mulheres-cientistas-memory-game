@@ -1,12 +1,14 @@
 import {Storage} from '/mulheres-cientistas-memory-game/src/storage.js';
 
-const darkmode = Storage.read('darkmode');
+const darkmode = Storage.read('darkmode', true);
 
 if(darkmode === null) {
-  Storage.write('darkmode', {'enabled': 'true'});
-  document.body.classList.toggle('dark');
-} else {
-  if(darkmode['enabled'] === 'true') {
-    document.body.classList.toggle('dark');
-  }
+  Storage.write('darkmode', {'enabled': 'true'}, true);
+  document.documentElement.classList.add('dark');
+} 
+else if(darkmode.enabled === 'true') {
+  document.documentElement.classList.add('dark');
+} 
+else {
+  document.documentElement.classList.remove('dark');
 }

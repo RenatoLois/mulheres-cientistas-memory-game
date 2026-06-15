@@ -78,7 +78,7 @@ export class AppHeader extends HTMLElement {
 
     const themeBtn = this.querySelector('.theme-btn');
     themeBtn.addEventListener('click', () => {
-      const isDark = document.body.classList.toggle('dark');
+      const isDark = document.documentElement.classList.toggle('dark');
       Storage.write('darkmode', { 'enabled': isDark ? 'true' : 'false' }, true);
     });
 
