@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/view/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/body.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/mode-grid.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/player-profile.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/ranking.css">
+    <script type="module" src="/src/init.js"></script>
+    <script type="module" src="/view/components/appHeader/appHeader.js"></script>
+    <script type="module" src="/view/components/appFooter/appFooter.js"></script>
+    <script type="module" src="/view/components/appModeCard/appModeCard.js"></script>
+  </head>
+  <body>
+
+    <app-header></app-header>
+
+    <main>
+      <div class="player-profile">
+        <div class="profile-header">
+          <div class="profile-avatar" id="profile-icon-container"></div>
+          <button id="change-icon-btn" class="change-icon-btn" title="Trocar Ícone">
+            <i class="fa-solid fa-rotate"></i>
+          </button>
+          <h2 class="profile-name" id="profile-name">Jogador</h2>
+        </div>
+        <div class="profile-stats">
+          <div class="stat-item">
+            <span class="stat-value" id="stat-points">0</span>
+            <span class="stat-label" data-i18n="statsPoints">Pontos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="stat-matches">0</span>
+            <span class="stat-label" data-i18n="statsMatches">Partidas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="stat-tries">0</span>
+            <span class="stat-label" data-i18n="statsTries">Tentativas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="stat-accuracy">0%</span>
+            <span class="stat-label" data-i18n="statsAccuracy">Precisão</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modes-grid">
+      <mode-card 
+        img="/view/images/computer-science.png"
+        title-key="modeComputingTitle"
+        desc-key="modeComputingDesc"
+        href="/view/pages/pre-game.html?mode=computing">
+      </mode-card>
+      <mode-card
+        img="/view/images/math.jpg"
+        title-key="modeMathTitle"
+        desc-key="modeMathDesc"
+        href="/view/pages/pre-game.html?mode=math">
+      </mode-card>
+      <mode-card
+        img="/view/images/psychology.jpg"
+        title-key="modePsychologyTitle"
+        desc-key="modePsychologyDesc"
+        href="/view/pages/pre-game.html?mode=psychology">
+      </mode-card>
+      <mode-card
+        img="/view/images/chemistry.jpg"
+        title-key="modeChemistryTitle"
+        desc-key="modeChemistryDesc"
+        href="/view/pages/pre-game.html?mode=chemistry">
+      </mode-card>
+      <mode-card
+        img="/view/images/biology.jpg"
+        title-key="modeBiologyTitle"
+        desc-key="modeBiologyDesc"
+        href="/view/pages/game.html?mode=biology">
+      </mode-card>
+      <mode-card
+        img="/view/images/philosophy.jpg"
+        title-key="modePhilosophyTitle"
+        desc-key="modePhilosophyDesc"
+        href="/view/pages/game?mode=philosophy">
+      </mode-card>
+    </div>
+
+    <div class="ranking-container">
+      <div class="ranking-header">
+        <h2 class="ranking-title" data-i18n="rankingTitle">Ranking</h2>
+        <div class="ranking-tabs">
+          <button id="tab-points" class="ranking-tab active" data-i18n="rankingPointsTab">Pontos</button>
+          <button id="tab-accuracy" class="ranking-tab" data-i18n="rankingAccuracyTab">Precisão</button>
+        </div>
+      </div>
+      <ol id="ranking-list" class="ranking-list"></ol>
+    </div>
+
+    <app-footer></app-footer>
+
+    <script type="module" src="/view/js/player-profile.js"></script>
+    <script type="module" src="/view/js/render-ranking.js"></script>
+  </body>
+</html>

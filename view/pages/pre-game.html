@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/view/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/body.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/difficulty-menu.css">
+    <script type="module" src="/src/init.js"></script>
+    <script type="module" src="/view/components/appHeader/appHeader.js"></script>
+    <script type="module" src="/view/components/appFooter/appFooter.js"></script>
+  </head>
+  <body>
+
+    <app-header></app-header>
+
+    <main>
+      <section id="difficulty-menu" class="menu-container dropdown-escondido">
+        <h2 data-i18n="selectDifficulty">Selecione a Dificuldade</h2>
+        <p data-i18n="difficultyDescription">Isso afetará o algoritmo e a quantia de cartas:</p>
+        
+        <div class="buttons-difficulty">
+          
+          <button class="btn-diff easy" data-difficulty="easy" data-cards="8">
+            <span data-i18n="diffEasyName">Aprendiz</span>
+            <small><span data-i18n="qtyCards10">10 Cartas</span></small>
+          </button>
+          
+          <button class="btn-diff medium" data-difficulty="medium" data-cards="16">
+            <span data-i18n="diffMediumName">Pesquisador</span>
+            <small><span data-i18n="qtyCards15">15 Cartas</span></small>
+          </button>
+          
+          <button class="btn-diff hard" data-difficulty="hard" data-cards="24">
+            <span data-i18n="diffHardName">Doutor</span>
+            <small><span data-i18n="qtyCards20">20 Cartas</span></small>
+          </button>
+
+        </div>
+      </section>
+    </main>
+
+    <app-footer></app-footer>
+
+    <script type="module" src="/view/js/pre-game.js"></script>
+  </body>
+</html>

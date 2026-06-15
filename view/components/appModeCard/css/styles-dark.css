@@ -1,0 +1,13 @@
+body.dark .mode-card {
+  background-color: #1a1917;
+  border-color: #fdfbf7;
+}
+
+body.dark .mode-title,
+body.dark .mode-description {
+  color: #fdfbf7;
+}
+
+body.dark .mode-card:hover {
+  box-shadow: 0 8px 16px rgba(253, 251, 247, 0.05);
+}

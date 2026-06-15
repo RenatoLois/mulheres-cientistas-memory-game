@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/view/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/body.css">
+    <link rel="stylesheet" type="text/css" href="/view/css/start-form.css">
+    <script type="module" src="/src/init.js"></script>
+    <script type="module" src="/view/components/appHeader/appHeader.js"></script>
+    <script type="module" src="/view/components/appFooter/appFooter.js"></script>
+  </head>
+  <body>
+
+    <app-header></app-header>
+
+    <main class="form-container">
+      <form class="start-form">
+        <h2 class="form-title" data-i18n="welcome">Bem-vindo(a)</h2>
+
+        <div class="input-group">
+          <i class="fa-solid fa-user input-icon"></i>
+          <input type="text" id="username" data-i18n="inputNamePlaceholder" placeholder="Digite seu nome" required autocomplete="off">
+        </div>
+      
+        <button type="submit" class="btn-start">
+          <span class="btn-start-text" data-i18n="start">Iniciar</span><i class="fa-solid fa-play"></i>
+        </button>
+      </form>
+    </main>
+
+    <app-footer></app-footer>
+    <script type="module" src="/src/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+app-header header {
+  background-color: #ededff;
+  border-bottom: 6px solid #2933ff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+app-header h1 {
+  color: #000000;
+  font-size: 18px;
+  margin: 0;
+}
+
+app-header .home-btn {
+  position: absolute;
+  left: 20px;
+  background-color: #5923ef;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+app-header .home-btn:hover {
+  background-color: #ffffff;
+  color: #1d1d1d;
+  border-color: #3d1d85;
+}
+
+app-header .theme-btn {
+  position: absolute;
+  right: 20px;
+  background-color: #5923ef;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+app-header .theme-btn:hover {
+  background-color: #ffffff;
+  color: #1d1d1d;
+  border-color: #3d1d85;
+}
+
+app-header .lang-container {
+  position: absolute;
+  right: 80px;
+  display: flex;
+  align-items: center;
+}
+
+app-header .menu-toggle {
+  display: none;
+  background: #5923ef;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+app-header .lang-dropdown {
+  display: flex;
+  gap: 5px;
+}
+
+app-header .lang-option {
+  background: transparent;
+  border: 1px solid #5923ef;
+  color: #5923ef;
+  padding: 5px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+app-header .lang-option:hover, .lang-option.selected {
+  background: #5923ef;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+  app-header header {
+    justify-content: space-between;
+  }
+
+  app-header .menu-toggle {
+    display: block;
+  }
+
+  app-header .home-btn {
+    display: none;
+  }
+
+  app-header h1 {
+    justify-content: left;
+    text-align: left;
+    left: 10px;
+  }
+
+  app-header .lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #ffffff;
+    border: 2px solid #5923ef;
+    border-radius: 6px;
+    flex-direction: column;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+
+  app-header .lang-container.active .lang-dropdown {
+    display: flex;
+  }
+
+  app-header .lang-option {
+    border: none;
+    width: 50px;
+    text-align: center;
+    padding: 8px 0;
+  }
+  
+  app-header .lang-option:hover, .lang-option.selected {
+    background: #5923ef;
+    color: #ffffff;
+  }
+}

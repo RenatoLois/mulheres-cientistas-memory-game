@@ -1,0 +1,140 @@
+.menu-container {
+  background-color: #fdfbf7;
+  border: 2px solid #1a1a1a;
+  border-bottom: 6px solid #2933ff;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.menu-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: center;
+}
+
+.menu-container p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  opacity: 0.7;
+  text-align: center;
+  margin: 0;
+}
+
+.buttons-difficulty {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.btn-diff {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 20px;
+  background-color: #2933ff;
+  border: 2px solid #2933ff;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+.btn-diff span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fdfbf7;
+  text-align: left;
+  flex-grow: 1;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-diff small {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2933ff;
+  background-color: #1d1d1d;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1.5px solid #fdfbf7;
+  white-space: nowrap;
+}
+
+.btn-diff small span {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-diff:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px #1a1a1a;
+}
+
+.btn-diff:active {
+  transform: translateY(4px);
+  box-shadow: 0px 0px 0px transparent !important;
+}
+
+body.dark .menu-container {
+  background-color: #1a1917;
+  border-color: #fdfbf7;
+  border-bottom-color: #2933ff;
+}
+
+body.dark .menu-container h2,
+body.dark .menu-container p {
+  color: #fdfbf7;
+}
+
+body.dark .btn-diff {
+  border-color: #2933ff;
+  box-shadow: 4px 4px 0px #fdfbf7;
+}
+
+body.dark .btn-diff:hover {
+  box-shadow: 6px 6px 0px #fdfbf7;
+}
+
+@media (max-width: 640px) {
+  .menu-container {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  .btn-diff {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 15px;
+  }
+  
+  .btn-diff span {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .btn-diff small {
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+  }
+}

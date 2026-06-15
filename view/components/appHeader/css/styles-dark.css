@@ -1,0 +1,32 @@
+body.dark app-header header {
+  background-color: #12121e;
+  border-bottom: 6px solid #2933ff;
+}
+
+body.dark app-header h1 {
+  color: #ededff;
+}
+
+body.dark app-header .home-btn {
+  background-color: #2d4def;
+  color: #ffffff;
+  border: 2px solid #12121e;
+}
+
+body.dark app-header .home-btn:hover {
+  background-color: #ffffff;
+  color: #2d2d2d;
+  border-color: #ff6fff;
+}
+
+body.dark app-header .theme-btn {
+  background-color: #2d4def;
+  color: #ffffff;
+  border: 2px solid #12121e;
+}
+
+body.dark app-header .theme-btn:hover {
+  background-color: #ffffff;
+  color: #2d2d2d;
+  border-color: #ff6fff;
+}

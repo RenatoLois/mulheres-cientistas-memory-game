@@ -1,0 +1,15 @@
+body {
+  background: linear-gradient(180deg, #edebe7 0%, #f2f2f4 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+}
+
+body.dark {
+  background: linear-gradient(180deg, #1a1917 0%, #121215 100%);
+  background-attachment: fixed;
+}
