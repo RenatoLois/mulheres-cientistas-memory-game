@@ -84,8 +84,7 @@ export class AppHeader extends HTMLElement {
 
     const homeBtn = this.querySelector('.home-btn');
     homeBtn.addEventListener('click', () => {
-      const base = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
-      window.location.href = `${base}/view/pages/main.html`;
+      window.location.href = `/mulheres-cientistas-memory-game/view/pages/main.html`;
     });
   }
 }

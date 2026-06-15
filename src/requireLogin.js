@@ -6,8 +6,7 @@ export function requireLogin() {
   const currentName = currentUserData?.username || null;
 
   if (!currentName) {
-    const base = window.location.pathname.split('/').slice(0, 2).join('/');
-    window.location.href = `${base}/view/pages/main.html`;
+    window.location.href = `/mulheres-cientistas-memory-game/view/pages/main.html`;
     throw new Error(""); 
   }
 }

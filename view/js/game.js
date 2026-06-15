@@ -7,7 +7,7 @@ if (mode == null) {
 } else {
   let difficulty = UrlValues.get('difficulty');
   if(difficulty === null) {
-    window.location.href = `/view/pages/game.html?mode=${mode}&difficulty=${difficulty}`;
+    window.location.href = `/mulheres-cientistas-memory-game/view/pages/game.html?mode=${mode}&difficulty=${difficulty}`;
   } else {
     
   }

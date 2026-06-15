@@ -20,6 +20,5 @@ form.addEventListener('submit', function(event) {
 
   Storage.write('currentUser', {'username': name}, true);
 
-  const base = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
-  window.location.href = `${base}/view/pages/dashboard.html`;
+  window.location.href = `/mulheres-cientistas-memory-game/view/pages/dashboard.html`;
 });

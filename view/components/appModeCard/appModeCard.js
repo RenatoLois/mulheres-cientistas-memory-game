@@ -43,8 +43,7 @@ export class ModeCard extends HTMLElement {
       if (cardDiv) {
         cardDiv.style.cursor = 'pointer';
         cardDiv.addEventListener('click', () => {
-          const base = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
-          window.location.href = `${base}${href}`;
+          window.location.href = `/mulheres-cientistas-memory-game/${href}`;
         });
       }
     }
