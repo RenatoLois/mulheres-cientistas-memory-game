@@ -1,5 +1,5 @@
-import { Storage } from '/src/storage.js';
-import { translations } from '/src/languages-texts.js';
+import { Storage } from '/mulheres-cientistas-memory-game/src/storage.js';
+import { translations } from '/mulheres-cientistas-memory-game/src/languages-texts.js';
 
 export function changeLanguage(lang) {
   Storage.write('userLang', { 'langName': lang }, true);

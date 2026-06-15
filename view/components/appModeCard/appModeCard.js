@@ -3,8 +3,8 @@ export class ModeCard extends HTMLElement {
   static stylesDark = '';
 
   static stylePromises = Promise.all([
-    fetch(new URL('/view/components/appModeCard/css/styles.css', import.meta.url)).then(res => res.text()),
-    fetch(new URL('/view/components/appModeCard/css/styles-dark.css', import.meta.url)).then(res => res.text()),
+    fetch(new URL('/mulheres-cientistas-memory-game/view/components/appModeCard/css/styles.css', import.meta.url)).then(res => res.text()),
+    fetch(new URL('/mulheres-cientistas-memory-game/view/components/appModeCard/css/styles-dark.css', import.meta.url)).then(res => res.text()),
   ]).then(([cssNormal, cssDark]) => {
     this.styles = "<style>" + cssNormal + "</style>";
     this.stylesDark = "<style>" + cssDark + "</style>";
@@ -43,7 +43,7 @@ export class ModeCard extends HTMLElement {
       if (cardDiv) {
         cardDiv.style.cursor = 'pointer';
         cardDiv.addEventListener('click', () => {
-          window.location.href = `/mulheres-cientistas-memory-game/${href}`;
+          window.location.href = `${href}`;
         });
       }
     }

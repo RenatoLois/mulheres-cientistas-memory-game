@@ -1,4 +1,4 @@
-import { Storage } from '/src/storage.js';
+import { Storage } from '/mulheres-cientistas-memory-game/src/storage.js';
 
 
 export function requireLogin() {

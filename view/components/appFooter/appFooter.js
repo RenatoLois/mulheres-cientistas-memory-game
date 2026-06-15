@@ -3,8 +3,8 @@ export class AppFooter extends HTMLElement {
   static stylesDark = '';
 
   static stylePromises = Promise.all([
-    fetch(new URL('/view/components/appFooter/css/styles.css', import.meta.url)).then(res => res.text()),
-    fetch(new URL('/view/components/appFooter/css/styles-dark.css', import.meta.url)).then(res => res.text()),
+    fetch(new URL('/mulheres-cientistas-memory-game/view/components/appFooter/css/styles.css', import.meta.url)).then(res => res.text()),
+    fetch(new URL('/mulheres-cientistas-memory-game/view/components/appFooter/css/styles-dark.css', import.meta.url)).then(res => res.text()),
   ]).then(([cssNormal, cssDark]) => {
     this.styles = "<style>" + cssNormal + "</style>";
     this.stylesDark = "<style>" + cssDark + "</style>";

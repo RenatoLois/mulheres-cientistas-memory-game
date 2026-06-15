@@ -1,4 +1,4 @@
-import {UrlValues} from '/src/urlValues.js';
+import {UrlValues} from '/mulheres-cientistas-memory-game/src/urlValues.js';
 
 let mode = UrlValues.get('mode');
 if (mode == null) {

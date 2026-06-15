@@ -1,4 +1,4 @@
-import { Storage } from '/src/storage.js';
+import { Storage } from '/mulheres-cientistas-memory-game/src/storage.js';
 
 const rankingList = document.getElementById('ranking-list');
 const tabPoints = document.getElementById('tab-points');

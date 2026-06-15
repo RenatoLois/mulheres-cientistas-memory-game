@@ -1,5 +1,5 @@
-import { Storage } from '/src/storage.js';
-import { possibleIcons } from '/src/data/possibleIcons.js';
+import { Storage } from '/mulheres-cientistas-memory-game/src/storage.js';
+import { possibleIcons } from '/mulheres-cientistas-memory-game/src/data/possibleIcons.js';
 
 export class PlayerModel {
   

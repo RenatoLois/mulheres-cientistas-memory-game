@@ -1,5 +1,5 @@
-import { requireLogin } from '/src/requireLogin.js';
-import { UrlValues } from '/src/urlValues.js'
+import { requireLogin } from '/mulheres-cientistas-memory-game/src/requireLogin.js';
+import { UrlValues } from '/mulheres-cientistas-memory-game/src/urlValues.js'
 
 
 requireLogin();
@@ -15,6 +15,6 @@ const buttons = document.querySelectorAll('.btn-diff');
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     const difficulty = button.getAttribute('data-difficulty');
-    window.location.href = `/view/pages/game.html?mode=${mode}&difficulty=${difficulty}`;
+    window.location.href = `/mulheres-cientistas-memory-game/view/pages/game.html?mode=${mode}&difficulty=${difficulty}`;
   });
 });

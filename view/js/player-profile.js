@@ -1,6 +1,6 @@
-import { Storage } from '/src/storage.js';
-import { PlayerModel } from '/src/playerModel.js';
-import { requireLogin } from '/src/requireLogin.js';
+import { Storage } from '/mulheres-cientistas-memory-game/src/storage.js';
+import { PlayerModel } from '/mulheres-cientistas-memory-game/src/playerModel.js';
+import { requireLogin } from '/mulheres-cientistas-memory-game/src/requireLogin.js';
 
 
 requireLogin();
