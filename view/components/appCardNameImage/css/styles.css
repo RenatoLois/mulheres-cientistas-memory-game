@@ -118,8 +118,20 @@ app-card-name-image {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 450px) {
   .card-name {
-    font-size: 0.75rem;
+    font-size: 0.90rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .card-name {
+    font-size: 0.70rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .card-name {
+    font-size: 0.65rem;
   }
 }
