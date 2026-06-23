@@ -66,7 +66,7 @@ app-card-name-image {
 
 .card-name {
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   margin: 6px 0 2px 0;
   width: 100%;
   word-break: break-word;
@@ -115,5 +115,11 @@ app-card-name-image {
   }
   100% {
     filter: brightness(60%);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-name {
+    font-size: 0.75rem;
   }
 }
