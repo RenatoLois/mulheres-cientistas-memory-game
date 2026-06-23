@@ -1,0 +1,21 @@
+html.dark .card-front {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+html.dark .card-discipline {
+  color: #bdc3c7;
+}
+
+html.dark .card-back {
+  background-color: #323232;
+}
+
+html.dark .card-back-icon {
+  color: #797979;
+}
+
+html.dark .card-img {
+  background-color: #232323;
+}

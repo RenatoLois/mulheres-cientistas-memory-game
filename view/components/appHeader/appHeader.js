@@ -13,7 +13,7 @@ export class AppHeader extends HTMLElement {
     fetch(new URL('/mulheres-cientistas-memory-game/view/components/appHeader/css/styles.css', import.meta.url)).then(res => res.text()),
     fetch(new URL('/mulheres-cientistas-memory-game/view/components/appHeader/css/styles-dark.css', import.meta.url)).then(res => res.text()),
   ]).then(([cssNormal, cssDark]) => {
-    this.styles = "<style>" + cssNormal +"</style>";
+    this.styles = "<style>" + cssNormal + "</style>";
     this.stylesDark = "<style>" + cssDark + "</style>";
   });
 
@@ -84,7 +84,13 @@ export class AppHeader extends HTMLElement {
 
     const homeBtn = this.querySelector('.home-btn');
     homeBtn.addEventListener('click', () => {
+      const currentUser = Storage.read('currentUser', true);
+      if(currentUser !== null) {
+        window.location.href = `/mulheres-cientistas-memory-game/view/pages/dashboard.html`;
+        throw new Error(""); 
+      }
       window.location.href = `/mulheres-cientistas-memory-game/view/pages/main.html`;
+      throw new Error(""); 
     });
   }
 }

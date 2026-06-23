@@ -49,7 +49,7 @@ export class ModeCard extends HTMLElement {
     }
 
     this.dispatchEvent(
-      new CustomEvent('card-rendered', { bubbles: true })
+      new CustomEvent('mode-card-rendered', { bubbles: true })
     );
   }
 }

@@ -83,7 +83,8 @@
   white-space: nowrap;
 }
 
-#change-icon-btn {
+#change-icon-btn,
+#logout-btn {
   font-family: 'Inter', sans-serif;
   font-size: 13px;
   font-weight: 600;
@@ -124,7 +125,12 @@ html.dark body .stat-label {
   color: #fdfbf7;
 }
 
-html.dark body #change-icon-btn {
+html.dark body .stat-value {
+  color: #5983ff;
+}
+
+html.dark body #change-icon-btn,
+html.dark body #logout-btn {
   background-color: #2933ff;
   color: #fdfbf7;
 }

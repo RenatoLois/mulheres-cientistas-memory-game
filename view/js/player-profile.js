@@ -33,6 +33,14 @@ changeIconBtn.addEventListener('click', () => {
   renderIcon();
 });
 
+const logoutBtn = document.getElementById('logout-btn');
+logoutBtn.addEventListener('click', () => {
+  Storage.delete('currentUser', true);
+  window.location.href = `/mulheres-cientistas-memory-game/view/pages/main.html`;
+  throw new Error(""); 
+});
+
+
 PlayerModel.updatePlayer(p);
 renderIcon();
 
