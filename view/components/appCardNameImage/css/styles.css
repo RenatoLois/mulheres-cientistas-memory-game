@@ -96,3 +96,24 @@ app-card-name-image {
   color: #707070;
   font-size: 3.5rem;
 }
+
+.memory-card.matched .card-inner .card-front {
+  background-color: #073737;
+}
+
+.memory-card.matched .card-inner .card-front .card-img {
+  filter: brightness(60%);
+  animation: shiny-card 1s ease-in-out;
+}
+
+@keyframes shiny-card {
+  0% {
+    filter: brightness(100%);
+  }
+  20% {
+    filter: brightness(150%);
+  }
+  100% {
+    filter: brightness(60%);
+  }
+}
