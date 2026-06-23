@@ -19,3 +19,7 @@ html.dark .card-back-icon {
 html.dark .card-img {
   background-color: #232323;
 }
+
+html.dark .memory-card.matched .card-inner .card-front {
+  background-color: #073737;
+}
