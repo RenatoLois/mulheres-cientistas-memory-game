@@ -44,7 +44,10 @@ function initGame(fieldMode, difficulty) {
   let lastClickedKey = null;
   document.addEventListener('game-card-clicked', e => {
     let clickedKey = e.detail.scientistKey;
-    if(clickedKey !== lastClickedKey && lastClickedKey !== null) {
+    if (lastClickedKey === null) {
+      lastClickedCard = document.querySelector('.memory-card:not(.flip):not(.matched)');
+      lastClickedKey = clickedKey;
+    } else if(clickedKey !== lastClickedKey) {
       document.querySelectorAll('.memory-card:not(.flip):not(.matched)').forEach(e => {
         setTimeout(() => {
           e.classList.toggle('flip');
@@ -52,9 +55,6 @@ function initGame(fieldMode, difficulty) {
         lastClickedKey = null;
         lastClickedCard = null;
       });
-    } else if (lastClickedKey === null) {
-      lastClickedCard = document.querySelector('.memory-card:not(.flip):not(.matched)');
-      lastClickedKey = clickedKey;
     } else {
       document.querySelectorAll('.memory-card:not(.flip):not(.matched)').forEach(e => {
         e.classList.toggle('matched');
