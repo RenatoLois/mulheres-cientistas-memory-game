@@ -70,11 +70,11 @@ export class AppCardNameImage extends HTMLElement {
     const memoryCard = this.querySelector('.memory-card');
     if (memoryCard) {
       memoryCard.addEventListener('click', () => {
-        this.dispatchEvent(new CustomEvent('card-clicked', { 
+        this.clickCallback(this);
+        this.dispatchEvent(new CustomEvent('game-card-clicked', { 
           bubbles: true,
           detail: { scientistKey: scientistKey } 
         }));
-        this.clickCallback(this);
       });
     }
 
