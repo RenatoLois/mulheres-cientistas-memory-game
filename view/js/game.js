@@ -23,10 +23,7 @@ function initGame(fieldMode, difficulty) {
   : (difficulty === 'easy') ? 18 : 0;
 
   // duplication cards
-  const selectedKeys = matchingKeys.slice(0, numCards / 2);
-  selectedKeys.forEach(key => {
-    selectedKeys.push(key);
-  })
+  const selectedKeys = [...matchingKeys, ...matchingKeys];
 
   // Fisher Yates 'Algorithm (shuffling again)
   for (let i = selectedKeys.length - 1; i > 0; i--) {
@@ -48,7 +45,7 @@ function initGame(fieldMode, difficulty) {
   document.addEventListener('game-card-clicked', e => {
     let clickedKey = e.detail.scientistKey;
     if(clickedKey !== lastClickedKey && lastClickedKey !== null) {
-      document.querySelectorAll('.memory-card:not(.flip)').forEach(e => {
+      document.querySelectorAll('.memory-card:not(.flip):not(.matched)').forEach(e => {
         setTimeout(() => {
           e.classList.toggle('flip');
         }, 700);
@@ -56,10 +53,14 @@ function initGame(fieldMode, difficulty) {
         lastClickedCard = null;
       });
     } else if (lastClickedKey === null) {
-      lastClickedCard = document.querySelector('memory-card.flip');
+      lastClickedCard = document.querySelector('.memory-card:not(.flip):not(.matched)');
       lastClickedKey = clickedKey;
     } else {
-
+      document.querySelectorAll('.memory-card:not(.flip):not(.matched)').forEach(e => {
+        e.classList.toggle('matched');
+        lastClickedKey = null;
+        lastClickedCard = null;
+      });
     }
   });
 }
