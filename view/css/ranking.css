@@ -1,12 +1,12 @@
 .ranking-container {
+  position: relative;
   background-color: #fdfbf7;
   border: 2px solid #1a1a1a;
   border-bottom: 6px solid #2933ff;
   border-radius: 8px;
-  max-width: 1200px;
-  margin: 40px;
   padding: 20px;
   display: flex;
+  margin: 5% 10%;
   flex-direction: column;
   gap: 15px;
   box-sizing: border-box;
