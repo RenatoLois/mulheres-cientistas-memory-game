@@ -1,6 +1,7 @@
 import { info } from '/mulheres-cientistas-memory-game/src/data/info.js';
 
 export class AppCardNameImage extends HTMLElement {
+
   clickCallback(card) {
     const memoryCard = card.querySelector('.memory-card');
     memoryCard.classList.toggle('flip');
@@ -72,8 +73,8 @@ export class AppCardNameImage extends HTMLElement {
       memoryCard.addEventListener('click', () => {
         this.clickCallback(this);
         this.dispatchEvent(new CustomEvent('game-card-clicked', { 
-          bubbles: true,
-          detail: { scientistKey: scientistKey } 
+          'bubbles': true,
+          'detail': { scientistKey: scientistKey, card: this },
         }));
       });
     }
