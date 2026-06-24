@@ -37,7 +37,7 @@ function initGame(fieldMode, difficulty) {
     const cardElement = document.createElement('app-card-name-image');
     cardElement.setAttribute('scientist', key);
     cardElement.setAttribute('flipped', 'true');
-    // cardElement.setClickEvent(e => {});
+    cardElement.setClickEvent(e => {});
     cardsGrid.appendChild(cardElement);
   });
 
@@ -47,16 +47,17 @@ function initGame(fieldMode, difficulty) {
   let lastClickedCard = null;
   let lastClickedKey = null;
   document.addEventListener('game-card-clicked', e => {
-    if(locked) return;
-    else {
-
-    }
-
     let clickedKey = e.detail.scientistKey;
+    let clickedCard = e.detail.card;
+
+    const memoryCardDiv = clickedCard.querySelector('.memory-card');
+
     if (lastClickedKey === null) {
-      lastClickedCard = document.querySelector('.memory-card:not(.flip):not(.matched)');
+      lastClickedCard = clickedCard;
       lastClickedKey = clickedKey;
-    } else if(clickedKey !== lastClickedKey) {
+      memoryCardDiv.classList.toggle('flip');
+    } else if(clickedCard !== lastClickedCard && lastClickedKey !== clickedKey) {
+      memoryCardDiv.classList.toggle('flip');
       document.querySelectorAll('.memory-card:not(.flip):not(.matched)').forEach(e => {
         setTimeout(() => {
           e.classList.toggle('flip');
@@ -64,7 +65,7 @@ function initGame(fieldMode, difficulty) {
         lastClickedKey = null;
         lastClickedCard = null;
       });
-    } else {
+    } else if(clickedCard !== lastClickedCard && lastClickedKey === clickedKey) {
       document.querySelectorAll('.memory-card:not(.flip):not(.matched)').forEach(e => {
         e.classList.toggle('matched');
         lastClickedKey = null;
